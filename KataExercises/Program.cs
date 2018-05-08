@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 namespace KataExercises {
     class Program {
         static void Main(string[] args) {
+            Console.WriteLine(string.Join(",\n", Kata.TowerBuilder(4)));
+            Console.ReadKey();
         }
     }
 }
