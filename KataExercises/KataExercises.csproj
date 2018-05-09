@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Anagrams.cs" />
     <Compile Include="Dubstep.cs" />
+    <Compile Include="FuelExcersise.cs" />
     <Compile Include="HammingNumbers.cs" />
     <Compile Include="Kata.cs" />
     <Compile Include="KataPigLatin.cs" />
