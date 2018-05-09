@@ -13,6 +13,13 @@ namespace KataExercises {
             }
             return false;
         }
+        /*
+         * Should be
+         * return mpg * fuelLeft >= distanceToPump;
+         * 
+         */
+
+        
     
 }
 }
