@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-public class Kata {
+public class KataTowerBuilder {
     public static string[] TowerBuilder(int nFloors) {
         string[] builder = new string[nFloors];
         string use = null;
