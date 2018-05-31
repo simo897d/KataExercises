@@ -61,4 +61,46 @@
             Assert.AreEqual(false, FuelExcersise.ZeroFuel(400, 500, 1));
         }
     }
+    [TestClass]
+    public class FiveASideTests {
+        [TestMethod]
+        public void ChooseSidesTwoAgainstOne() {
+            var players = new List<Player>();
+            players.Add(new Player("Player 1", 50));
+            players.Add(new Player("Player 2", 50));
+            players.Add(new Player("Player 3", 99));
+
+            int diff = FiveASide.ChooseSides(players.ToArray());
+            Assert.AreEqual(1, diff);
+        }
+
+        [TestMethod]
+        public void ChooseSidesTwoAgainstTwo() {
+            var players = new List<Player>();
+            players.Add(new Player("Player 1", 50));
+            players.Add(new Player("Player 2", 60));
+            players.Add(new Player("Player 3", 40));
+            players.Add(new Player("Player 4", 55));
+
+            int diff = FiveASide.ChooseSides(players.ToArray());
+            Assert.AreEqual(5, diff);
+        }
+        [TestMethod]
+        public void ChooseSidesTwoAgainstNine() {
+            var players = new List<Player>();
+            players.Add(new Player("Player 1", 50));
+            players.Add(new Player("Player 2", 50));
+            players.Add(new Player("Player 3", 99));
+            players.Add(new Player("Player 1", 50));
+            players.Add(new Player("Player 2", 50));
+            players.Add(new Player("Player 3", 99));
+            players.Add(new Player("Player 1", 50));
+            players.Add(new Player("Player 2", 50));
+            players.Add(new Player("Player 3", 99));
+            players.Add(new Player("Player 3", 99));
+            int diff = FiveASide.ChooseSides(players.ToArray());
+            Assert.AreEqual(1, diff);
+        }
+    }
 }
+
